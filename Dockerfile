@@ -8,6 +8,8 @@ RUN set -x && \
     chmod +x /usr/local/bin/peer-finder && \
     \
     apt-get purge -y --auto-remove ca-certificates wget
+    \
+    apt-get install -y xinetd
 
 ADD ["galera/", "/opt/galera/"]
 
